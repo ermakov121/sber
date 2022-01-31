@@ -16,9 +16,7 @@ import static sber_test.TestBase.getConfigParametr;
 public class RegistrationTestAPI{
 
     @Test(description = "POST")
-    public void postRequestExampleTest() {
-        String someRandomString = String.format("%1$TH%1$TM%1$TS", new Date());
-
+    public void register() {
         JSONObject requestBody = new JSONObject();
         String currentTime = new SimpleDateFormat("MMdd_HHmmss").format(Calendar.getInstance().getTime());
         requestBody.put("email", getConfigParametr("email") + currentTime + "@mail.ru");
